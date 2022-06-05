@@ -11,12 +11,17 @@ function App() {
     return (
         <>
             <div className="App" style={{backgroundColor: `${color}`}}/>
+            <label>Select base color: </label>
             <select name="colors" value={color} onChange={handleColor}>
                 <option value="">-select color-</option>
                 <option value="#f00">Red</option>
                 <option value="#0f0">Green</option>
                 <option value="#00f">Blue</option>
             </select>
+            <p>
+                <label>Color HEX: </label>
+                <input type="text" value={color} onChange={handleColor}/>
+            </p>
         </>
     );
 }
