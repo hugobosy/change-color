@@ -20,7 +20,7 @@ function App() {
             </select>
             <p>
                 <label>Color HEX: </label>
-                <input type="text" value={color} onChange={handleColor}/>
+                <input type="color" value={color} onChange={handleColor}/>
             </p>
         </>
     );
