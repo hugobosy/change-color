@@ -1,11 +1,24 @@
 import './App.css';
+import {useState} from "react";
 
 function App() {
-  return (
-    <div className="App">
+    const [color, setColor] = useState('')
 
-    </div>
-  );
+    const handleColor = e => {
+        e.preventDefault();
+        setColor(e.target.value);
+    }
+    return (
+        <>
+            <div className="App" style={{backgroundColor: `${color}`}}/>
+            <select name="colors" value={color} onChange={handleColor}>
+                <option value="">-select color-</option>
+                <option value="#f00">Red</option>
+                <option value="#0f0">Green</option>
+                <option value="#00f">Blue</option>
+            </select>
+        </>
+    );
 }
 
 export default App;
